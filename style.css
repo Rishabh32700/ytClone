@@ -3,16 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 
-  font-family: "poppins", "sans-serif";
+  font-family: "Roboto", "Arial", sans-serif;
 }
 
-a{
-    text-decoration: none;
-    color:white;
+a {
+  text-decoration: none;
+  color: white;
 }
 
-body{
-    background-color: rgb(34, 34, 34);
+body {
+  background-color: #0c1115;
 }
 
 img {
@@ -32,8 +32,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: rgb(34, 34, 34);
-
+  background-color: #0c1115;
 }
 
 .nav-right img {
@@ -50,7 +49,7 @@ nav {
 }
 
 .nav-left .ytLogo {
-  width: 75px;
+  width: 105px;
 }
 
 .nav-middle {
@@ -58,116 +57,112 @@ nav {
   width: 50%;
 }
 
-.nav-middle .mic-icon{
-    width: 20px;
+.nav-middle .mic-icon {
+  width: 20px;
 }
 
-.search-box{
-    width:90%;
-    border: 1px solid grey;
-    border-radius: 50px;
-    justify-content: space-between;
-    padding-left: 1rem;
+.search-box {
+  width: 90%;
+  border: 1px solid grey;
+  border-radius: 50px;
+  justify-content: space-between;
+  padding-left: 1rem;
 }
 
-.search-box input{
-    width:80%;
-    border:none;
-    padding: .4rem;
-    outline: none;
-    margin-right: 20px;
-    border-radius: 50px;
-    background-color: transparent;
-    color: white;
+.search-box input {
+  width: 80%;
+  border: none;
+  padding: 0.4rem;
+  outline: none;
+  margin-right: 20px;
+  border-radius: 50px;
+  background-color: transparent;
+  color: white;
 }
 
-.search-box img{
-    padding: 10px;
-    /* border: 2px solid green; */
-    /* border-radius: 50px; */
-   
+.search-box img {
+  padding: 10px;
+  /* border: 2px solid green; */
+  /* border-radius: 50px; */
 }
 
-.search-Div{
-    width: 10%;
-    background-color: rgb(72, 72, 72);
-    /* border-radius: 50px; */
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-    justify-content: center;
+.search-Div {
+  width: 10%;
+  background-color: rgb(72, 72, 72);
+  /* border-radius: 50px; */
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  justify-content: center;
 }
 
-.mic-div{
-    /* border:2px solid green; */
-    width: 50px;
-    height: 50px;
-    justify-content: center;
-    
-border-radius: 50%;
+.mic-div {
+  /* border:2px solid green; */
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+
+  border-radius: 50%;
 }
 
-.mic-icon{
-    /* border:2px solid red */
-    border-radius: 50px;
+.mic-icon {
+  /* border:2px solid red */
+  border-radius: 50px;
 }
 
-.sidebar{
-    /* border: 2px solid red; */
-    width: 15%;
-    height: 100vh;
-    position: fixed;
-    top:0;
-    z-index: 50;
-    padding: 10px;
-    padding-top: 80px;
+.sidebar {
+  /* border: 2px solid red; */
+  width: 15%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  padding: 10px;
+  padding-top: 80px;
 }
 
-
-.sidebar-upper a{
-    padding: 12px;
-    margin-bottom: 2px;
-
+.sidebar-upper a {
+  padding: 12px;
+  margin-bottom: 2px;
 }
 
-.sidebar-upper a img{
-    width: 20px;
-    margin-right: 20px;
+.sidebar-upper a img {
+  width: 20px;
+  margin-right: 20px;
 }
 
-.sidebar-upper a:first-child{
-    /* border: 2px solid red; */
-    border-radius: 10px;
-    background-color: #2e2e2e;
+.sidebar-upper a:first-child {
+  /* border: 2px solid red; */
+  border-radius: 10px;
+  background-color: #2e2e2e;
 }
 
-.sidebar-upper a:hover{
-    border-radius: 10px;
-    background-color: #2e2e2e;
-
+.sidebar-upper a:hover {
+  border-radius: 10px;
+  background-color: #2e2e2e;
 }
 
-.mainContainer{
-    /* border: 2px solid red; */
-    margin-left: 17%;
-    flex-wrap: wrap;
+.mainContainer {
+  /* border: 2px solid red; */
+  margin-left: 17%;
+  flex-wrap: wrap;
 }
 
-.card{
-    /* border: 2px solid green; */
-    width: 250px;
-    margin-right: 28px;
-    color: white;
-    margin-bottom: 20px;
-    margin-top: 20px;
+.card {
+  /* border: 2px solid green; */
+  width: 250px;
+  margin-right: 28px;
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
-.thumbnailImg{
-    width: 100%;
-    border-radius: 10px;
+.thumbnailImg {
+  width: 100%;
+  border-radius: 10px;
 }
 
-.logoContainer .userImg{
-    border-radius: 50%;
-    width: 25px;
-    margin-right: 15px;
+.logoContainer .userImg {
+  border-radius: 50%;
+  width: 25px;
+  margin-right: 15px;
 }
