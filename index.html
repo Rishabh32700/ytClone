@@ -9,9 +9,10 @@
   <body>
     <nav class="d-flex">
       <div class="nav-left d-flex">
-        <img src="./images/images/hamburger.png" alt="" />
-
-        <img class="ytLogo" src="./images/images/ytIcon.png" alt="" />
+        <img class="menu-icon" src="./images/images/hamburger.png" alt="" />
+        <a href="./index.html">
+          <img class="ytLogo" src="./images/images/ytIcon.png" alt="" />
+        </a>
       </div>
       <div class="nav-middle d-flex">
         <div class="search-box d-flex">
@@ -25,8 +26,8 @@
         </div>
       </div>
       <div class="nav-right d-flex">
-        <img alt="image not found" src="./images/images/upload.png" alt="" />
-        <img src="./images/images/notification.png" alt="" />
+        <img class="uploadImg" alt="image not found" src="./images/images/upload.png" alt="" />
+        <img class="notifiationImg" src="./images/images/notification.png" alt="" />
         <img class="userImg" src="./images/images/myImg.jpeg" alt="" />
       </div>
     </nav>
@@ -88,14 +89,17 @@
 
     <div class="mainContainer d-flex">
       <!-- card -->
-      <div class="card">
-        <div class="thumbanailContainer">
-          <img
-            class="thumbnailImg"
-            src="./images/images/thumbnail1.png"
-            alt=""
-          />
-        </div>
+      <div id="card" class="card">
+        <a href="./video.html">
+          <div class="thumbanailContainer">
+            <img
+              class="thumbnailImg"
+              src="./images/images/thumbnail1.png"
+              alt=""
+            />
+          </div>
+        </a>
+
         <div class="detailsContainer d-flex">
           <div class="logoContainer">
             <img class="userImg" src="./images/images/myImg.jpeg" alt="" />
@@ -109,7 +113,7 @@
       </div>
       <!-- card -->
       <!-- card -->
-      <div class="card">
+      <div id="card" class="card">
         <div class="thumbanailContainer">
           <img
             class="thumbnailImg"
@@ -130,7 +134,7 @@
       </div>
       <!-- card -->
       <!-- card -->
-      <div class="card">
+      <div id="card" class="card">
         <div class="thumbanailContainer">
           <img
             class="thumbnailImg"
@@ -151,7 +155,7 @@
       </div>
       <!-- card -->
       <!-- card -->
-      <div class="card">
+      <div id="card" class="card">
         <div class="thumbanailContainer">
           <img
             class="thumbnailImg"
@@ -172,7 +176,7 @@
       </div>
       <!-- card -->
       <!-- card -->
-      <div class="card">
+      <div id="card" class="card">
         <div class="thumbanailContainer">
           <img
             class="thumbnailImg"
@@ -193,7 +197,7 @@
       </div>
       <!-- card -->
       <!-- card -->
-      <div class="card">
+      <div id="card" class="card">
         <div class="thumbanailContainer">
           <img
             class="thumbnailImg"
@@ -214,7 +218,7 @@
       </div>
       <!-- card -->
       <!-- card -->
-      <div class="card">
+      <div id="card" class="card">
         <div class="thumbanailContainer">
           <img
             class="thumbnailImg"
@@ -235,7 +239,7 @@
       </div>
       <!-- card -->
       <!-- card -->
-      <div class="card">
+      <div id="card" class="card">
         <div class="thumbanailContainer">
           <img
             class="thumbnailImg"
@@ -256,7 +260,7 @@
       </div>
       <!-- card -->
       <!-- card -->
-      <div class="card">
+      <div id="card" class="card">
         <div class="thumbanailContainer">
           <img
             class="thumbnailImg"
@@ -277,7 +281,7 @@
       </div>
       <!-- card -->
       <!-- card -->
-      <div class="card">
+      <div id="card" class="card">
         <div class="thumbanailContainer">
           <img
             class="thumbnailImg"
@@ -298,7 +302,7 @@
       </div>
       <!-- card -->
       <!-- card -->
-      <div class="card">
+      <div id="card" class="card">
         <div class="thumbanailContainer">
           <img
             class="thumbnailImg"
@@ -319,7 +323,7 @@
       </div>
       <!-- card -->
       <!-- card -->
-      <div class="card">
+      <div id="card" class="card">
         <div class="thumbanailContainer">
           <img
             class="thumbnailImg"
@@ -339,5 +343,7 @@
         </div>
       </div>
     </div>
+
+    <script src="./script.js"></script>
   </body>
 </html>
