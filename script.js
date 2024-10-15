@@ -2,6 +2,46 @@ var menuIcon = document.querySelector(".menu-icon")
 var sidebar = document.querySelector(".sidebar")
 var mainContainer = document.querySelector(".mainContainer")
 // var card = document.getElementsByClassName("card")
+var likeButton = document.getElementById('likeButton');
+var dislikeButton = document.getElementById('dislikeButton');
+var likeCount = document.getElementById('likeCount');
+var dislikeCount = document.getElementById('dislikeCount');
+
+var likes = 0;
+var dislikes = 0;
+var userAction = null;
+
+
+likeButton.addEventListener('click', function () {
+    console.log('clicked');
+    if (userAction === 'liked') {
+      // If already liked, do nothing
+      return;
+    } else if (userAction === 'disliked') {
+      // Switch from dislike to like
+      dislikes--;
+      dislikeCount.innerHTML = dislikes;
+    }
+    likes++;
+    likeCount.innerHTML = likes;
+    userAction = 'liked';
+  });
+
+  dislikeButton.addEventListener('click', function () {
+    console.log('dislike button clicked!');
+    if (userAction === 'disliked') {
+      // If already disliked, do nothing
+      return;
+    } else if (userAction === 'liked') {
+      // Switch from like to dislike
+      likes--;
+      likeCount.innerHTML = likes;
+    }
+    dislikes++;
+    dislikeCount.innerHTML = dislikes;
+    userAction = 'disliked';
+
+});
 
 // console.log("menuIcon", card);
 
@@ -10,7 +50,7 @@ menuIcon.onclick = function(){
     mainContainer.classList.toggle("larger-mainContainer")
     // card.classList.toggle("larger-card")
     console.log("menu icon clicked");
-    
+
 }
 // Select the necessary elements
 var commentInput = document.querySelector('.writeCommentContainer input');
