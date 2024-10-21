@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         sidebar.style.display = "none";  // Hide sidebar
     }
-    
+
     // Optionally, toggle other styles like resizing the mainContainer
     mainContainer.classList.toggle("larger-mainContainer");
     console.log("menu icon clicked");
