@@ -217,14 +217,17 @@ nav {
 .video-list {
   /* border: 2px solid red; */
   display: flex;
-  justify-content: space-between;
   margin-bottom: 10px;
   color: white;
 }
 
 .video-list img {
-  width: 200px;
+  width: 240px;
   border-radius: 10px;
+}
+
+.video-list div {
+  padding-left: 15px;
 }
 
 .below-video-container {
@@ -362,4 +365,13 @@ nav {
 .content{
   flex-direction: column;
 }
+}
+
+@media only screen and (min-width: 1920px) {
+  .video-info a{
+    font-size: 28px;
+  }
+  .video-info p{
+    font-size: 28px;
+  }
 }
