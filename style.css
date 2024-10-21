@@ -217,7 +217,6 @@ nav {
 .video-list {
   /* border: 2px solid red; */
   display: flex;
-  justify-content: space-between;
   margin-bottom: 10px;
   color: white;
 }
@@ -225,6 +224,10 @@ nav {
 .video-list img {
   width: 200px;
   border-radius: 10px;
+}
+
+.video-list div {
+  padding-left: 15px;
 }
 
 .below-video-container {
