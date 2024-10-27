@@ -30,37 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log("menu icon clicked");
   });
 
-//   // Like button functionality
-//   likeButton.addEventListener('click', function () {
-//       console.log('clicked');
-//       if (userAction === 'liked') {
-//         // If already liked, do nothing
-//         return;
-//       } else if (userAction === 'disliked') {
-//         // Switch from dislike to like
-//         dislikes--;
-//         dislikeCount.innerHTML = dislikes;
-//       }
-//       likes++;
-//       likeCount.innerHTML = likes;
-//       userAction = 'liked';
-//   });
 
-//   // Dislike button functionality
-//   dislikeButton.addEventListener('click', function () {
-//       console.log('dislike button clicked!');
-//       if (userAction === 'disliked') {
-//         // If already disliked, do nothing
-//         return;
-//       } else if (userAction === 'liked') {
-//         // Switch from like to dislike
-//         likes--;
-//         likeCount.innerHTML = likes;
-//       }
-//       dislikes++;
-//       dislikeCount.innerHTML = dislikes;
-//       userAction = 'disliked';
-//   });
 
 likeButton.addEventListener('click', function () {
     console.log('clicked like button');
