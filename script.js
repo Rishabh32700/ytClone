@@ -7,9 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
   var likeCount = document.getElementById('likeCount');
   var dislikeCount = document.getElementById('dislikeCount');
 
-  var likes = 0;
-  var dislikes = 0;
-  var userAction = null;
+  var likes = parseInt(localStorage.getItem('likes')) || 0;
+  var dislikes = parseInt(localStorage.getItem('dislikes')) || 0;
+  var userAction = localStorage.getItem('userAction') || null;
+
+  // Update the UI with the stored values
+  likeCount.innerHTML = likes;
+  dislikeCount.innerHTML = dislikes;
 
   menuIcon.addEventListener('click', function() {
     console.log("Clicked menuIcon");
@@ -26,37 +30,90 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log("menu icon clicked");
   });
 
-  // Like button functionality
-  likeButton.addEventListener('click', function () {
-      console.log('clicked');
-      if (userAction === 'liked') {
-        // If already liked, do nothing
-        return;
-      } else if (userAction === 'disliked') {
-        // Switch from dislike to like
-        dislikes--;
-        dislikeCount.innerHTML = dislikes;
-      }
-      likes++;
-      likeCount.innerHTML = likes;
-      userAction = 'liked';
-  });
+//   // Like button functionality
+//   likeButton.addEventListener('click', function () {
+//       console.log('clicked');
+//       if (userAction === 'liked') {
+//         // If already liked, do nothing
+//         return;
+//       } else if (userAction === 'disliked') {
+//         // Switch from dislike to like
+//         dislikes--;
+//         dislikeCount.innerHTML = dislikes;
+//       }
+//       likes++;
+//       likeCount.innerHTML = likes;
+//       userAction = 'liked';
+//   });
 
-  // Dislike button functionality
-  dislikeButton.addEventListener('click', function () {
-      console.log('dislike button clicked!');
-      if (userAction === 'disliked') {
-        // If already disliked, do nothing
-        return;
-      } else if (userAction === 'liked') {
-        // Switch from like to dislike
+//   // Dislike button functionality
+//   dislikeButton.addEventListener('click', function () {
+//       console.log('dislike button clicked!');
+//       if (userAction === 'disliked') {
+//         // If already disliked, do nothing
+//         return;
+//       } else if (userAction === 'liked') {
+//         // Switch from like to dislike
+//         likes--;
+//         likeCount.innerHTML = likes;
+//       }
+//       dislikes++;
+//       dislikeCount.innerHTML = dislikes;
+//       userAction = 'disliked';
+//   });
+
+likeButton.addEventListener('click', function () {
+    console.log('clicked like button');
+    if (userAction === 'liked') {
+        // If already liked, decrement the like count and reset userAction
         likes--;
         likeCount.innerHTML = likes;
-      }
-      dislikes++;
-      dislikeCount.innerHTML = dislikes;
-      userAction = 'disliked';
-  });
+        userAction = null;
+    } else {
+        // If previously disliked, decrement dislike count
+        if (userAction === 'disliked') {
+            dislikes--;
+            dislikeCount.innerHTML = dislikes;
+        }
+        // Increment like count
+        likes++;
+        likeCount.innerHTML = likes;
+        userAction = 'liked';
+    }
+
+    // Store updated values in localStorage
+    localStorage.setItem('likes', likes);
+    localStorage.setItem('dislikes', dislikes);
+    localStorage.setItem('userAction', userAction);
+});
+
+// Dislike button functionality
+dislikeButton.addEventListener('click', function () {
+    console.log('clicked dislike button');
+    if (userAction === 'disliked') {
+        // If already disliked, decrement the dislike count and reset userAction
+        dislikes--;
+        dislikeCount.innerHTML = dislikes;
+        userAction = null;
+    } else {
+        // If previously liked, decrement like count
+        if (userAction === 'liked') {
+            likes--;
+            likeCount.innerHTML = likes;
+        }
+        // Increment dislike count
+        dislikes++;
+        dislikeCount.innerHTML = dislikes;
+        userAction = 'disliked';
+    }
+
+    // Store updated values in localStorage
+    localStorage.setItem('likes', likes);
+    localStorage.setItem('dislikes', dislikes);
+    localStorage.setItem('userAction', userAction);
+});
+
+
 
   // Menu icon toggle functionality
   menuIcon.onclick = function() {
