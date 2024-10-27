@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         dislikeCount.innerHTML = dislikes;
       }
       likes++;
+      likeButton.src = './images/images/like-red.png';
       likeCount.innerHTML = likes;
       userAction = 'liked';
   });
@@ -51,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
       } else if (userAction === 'liked') {
         // Switch from like to dislike
         likes--;
+        likeButton.src = './images/images/like.png';
         likeCount.innerHTML = likes;
       }
       dislikes++;
