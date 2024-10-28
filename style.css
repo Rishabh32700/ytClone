@@ -375,3 +375,6 @@ nav {
     font-size: 28px;
   }
 }
+.details:hover {
+  cursor: pointer;
+}
